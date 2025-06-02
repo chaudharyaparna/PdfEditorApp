@@ -5,6 +5,11 @@
 PdfEditorApp is a PDF editor designed to provide users with essential tools for viewing, editing, and annotating PDF documents. Built with C# and .NET core mvc, 
 this application offers a seamless experience for managing PDF files.
 
+Dotnet version & libraries used
+net9.0
+iTextSharp.LGPLv2.Core Version="3.7.4"
+Newtonsoft.Json Version="13.0.3"
+
 ## ✨ Features
 
 - **View PDFs**: Open and read PDF documents with ease.
