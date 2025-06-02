@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "PDF Editor";
+}
+
+<h2>Upload and Edit PDF</h2>
+
+<form id="uploadForm">
+    <input type="file" id="fileInput" name="file" accept="application/pdf" />
+    <button type="submit">Upload</button>
+</form>
+
+<div style="margin-top: 20px;">
+    <button onclick="setTool('rectangle')">Draw Rectangle</button>
+    <button onclick="setTool('circle')">Draw Circle</button>
+    <button onclick="setTool('text')">Add Text</button>
+    <button id="savePdfBtn">Save / Download Annotated PDF</button>
+    <p>Double-click canvas to enter text when 'Add Text' is selected.</p>
+</div>
+
+<div id="canvas-wrapper" style="position:relative; width:800px; height:1000px; border:1px solid #ccc;">
+    <canvas id="pdfCanvas" width="800" height="1000" style="position:absolute; top:0; left:0; z-index:5;"></canvas>
+    <canvas id="annotationCanvas" width="800" height="1000"
+        style="position:absolute; top:0; left:0; z-index:10;"></canvas>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.13.216/pdf.min.js"></script>
+<script src="~/js/pdf-editor.js"></script>
